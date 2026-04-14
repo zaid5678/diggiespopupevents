@@ -83,27 +83,13 @@
           <span class="section-label" style="display:block;text-align:center;margin-bottom:0.5rem;">We're Friendly, We Promise</span>
           <h2 class="section-title" id="contact-heading" style="text-align:center;margin-bottom:1rem;">Let's Make Something Happen</h2>
           <p>
-            Slide into our DMs or drop us an email — we'd love to hear from you.
+            Slide into our DMs or fill in the enquiry form below — we'd love to hear from you.
             Whether it's a question about tickets, a private booking, or just saying hi, we're here.
           </p>
         </div>
 
-        <!-- 3 Contact cards -->
-        <div class="contact-cards">
-
-          <a href="mailto:diggiespopupevents@gmail.com" class="contact-card reveal reveal-d1">
-            <div class="contact-card__icon">✉️</div>
-            <span class="contact-card__label">Email Us</span>
-            <span class="contact-card__value">diggiespopupevents@gmail.com</span>
-            <span class="contact-card__arrow">
-              Send a message
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                   fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </span>
-          </a>
+        <!-- 2 Contact cards (email removed) -->
+        <div class="contact-cards contact-cards--two">
 
           <a href="https://www.instagram.com/diggiespopupevents"
              target="_blank" rel="noopener noreferrer"
@@ -167,6 +153,111 @@
           </a>
         </div>
 
+      </div>
+    </section>
+
+    <!-- Enquiry Form -->
+    <section class="section section--cream" aria-labelledby="form-heading">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-label">Make an Enquiry</span>
+          <h2 class="section-title" id="form-heading">Send Us a Message</h2>
+          <p class="section-intro">Private booking, event hire, or just a question? Fill in the form and we'll get back to you.</p>
+          <span class="gold-line"></span>
+        </div>
+
+        <form
+          class="enquiry-form reveal"
+          name="enquiry"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          novalidate>
+
+          <!-- Netlify hidden fields -->
+          <input type="hidden" name="form-name" value="enquiry">
+          <p class="enquiry-form__honey" aria-hidden="true">
+            <label>Don't fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <div class="enquiry-form__row">
+            <div class="enquiry-form__group">
+              <label class="enquiry-form__label" for="name">Your Name <span class="enquiry-form__required">*</span></label>
+              <input
+                class="enquiry-form__input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="e.g. Sarah Williams"
+                required
+                autocomplete="name">
+            </div>
+            <div class="enquiry-form__group">
+              <label class="enquiry-form__label" for="email">Email Address <span class="enquiry-form__required">*</span></label>
+              <input
+                class="enquiry-form__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="e.g. sarah@example.com"
+                required
+                autocomplete="email">
+            </div>
+          </div>
+
+          <div class="enquiry-form__row">
+            <div class="enquiry-form__group">
+              <label class="enquiry-form__label" for="phone">Phone Number <span class="enquiry-form__optional">(optional)</span></label>
+              <input
+                class="enquiry-form__input"
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="e.g. 07700 900000"
+                autocomplete="tel">
+            </div>
+            <div class="enquiry-form__group">
+              <label class="enquiry-form__label" for="event-type">Type of Enquiry <span class="enquiry-form__required">*</span></label>
+              <select
+                class="enquiry-form__input enquiry-form__select"
+                id="event-type"
+                name="event-type"
+                required>
+                <option value="" disabled selected>Select an option…</option>
+                <option value="Cocktail Masterclass">Cocktail Masterclass</option>
+                <option value="Rum Masterclass">Rum Masterclass</option>
+                <option value="Pop-Up Bar Hire">Pop-Up Bar Hire</option>
+                <option value="Private Event (Birthday / Hen / Corporate)">Private Event (Birthday / Hen / Corporate)</option>
+                <option value="Festival / Market">Festival / Market</option>
+                <option value="General Enquiry">General Enquiry</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="enquiry-form__group">
+            <label class="enquiry-form__label" for="message">Your Message <span class="enquiry-form__required">*</span></label>
+            <textarea
+              class="enquiry-form__input enquiry-form__textarea"
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tell us about your event, date, number of guests, or anything else we should know…"
+              required></textarea>
+          </div>
+
+          <div class="enquiry-form__footer">
+            <button type="submit" class="btn btn--primary enquiry-form__submit">
+              Send Enquiry
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+            <p class="enquiry-form__note">We'll get back to you within 48 hours.</p>
+          </div>
+
+        </form>
       </div>
     </section>
 
@@ -243,14 +334,14 @@
         <div>
           <p class="footer__col-title">Get In Touch</p>
           <ul class="footer__info-list" role="list">
-            <li><a href="mailto:diggiespopupevents@gmail.com" class="footer__info-item"><span class="info-icon">✉</span> diggiespopupevents@gmail.com</a></li>
             <li><a href="https://www.instagram.com/diggiespopupevents" target="_blank" rel="noopener noreferrer" class="footer__info-item"><span class="info-icon">📷</span> @diggiespopupevents</a></li>
+            <li><a href="https://www.tiktok.com/@diggiespopupevents" target="_blank" rel="noopener noreferrer" class="footer__info-item"><span class="info-icon">🎵</span> @diggiespopupevents</a></li>
             <li><a href="https://www.tickettailor.com/events/diggiespopupevents/2142839" target="_blank" rel="noopener noreferrer" class="footer__info-item"><span class="info-icon">🎟</span> Book Tickets</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copy">© 2025 Diggies Pop Up Events. All rights reserved.</p>
+        <p class="footer__copy">© 2026 Diggies Pop Up Events. All rights reserved.</p>
         <div class="footer__bottom-links">
           <a href="contact.html" class="footer__bottom-link">Contact</a>
           <a href="https://www.instagram.com/diggiespopupevents" target="_blank" rel="noopener noreferrer" class="footer__bottom-link">Instagram</a>
