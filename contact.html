@@ -166,17 +166,16 @@
 
         <form
           class="enquiry-form reveal"
-          name="enquiry"
+          action="https://formsubmit.co/Diggiespopupenquiries@hotmail.com"
           method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
           novalidate>
 
-          <!-- Netlify hidden fields -->
-          <input type="hidden" name="form-name" value="enquiry">
-          <p class="enquiry-form__honey" aria-hidden="true">
-            <label>Don't fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
-          </p>
+          <!-- FormSubmit configuration -->
+          <input type="hidden" name="_subject" value="New Enquiry — Diggies Pop Up Events">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <!-- Honeypot spam trap -->
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
           <div class="enquiry-form__row">
             <div class="enquiry-form__group">
